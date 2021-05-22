@@ -26,5 +26,7 @@
 	<string>Main</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>NSAppleEventsUsageDescription</key>
+	<string>In order to get current open file on Xcode.</string>
 </dict>
 </plist>

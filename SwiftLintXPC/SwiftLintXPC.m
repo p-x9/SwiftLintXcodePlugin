@@ -7,13 +7,14 @@
 //
 
 #import "SwiftLintXPC.h"
+#import "Xcode.h"
 
 @implementation SwiftLintXPC
 
-// This implements the example protocol. Replace the body of this class with the implementation of this service's protocol.
-- (void)upperCaseString:(NSString *)aString withReply:(void (^)(NSString *))reply {
-    NSString *response = [aString uppercaseString];
-    reply(response);
+- (void)activeWorkspaceDocumentPath:(void (^)(NSString *))reply {
+    XcodeApplication *xcodeApp = [SBApplication applicationWithBundleIdentifier: @"com.apple.dt.Xcode"];
+    
+    reply(xcodeApp.activeWorkspaceDocument.path);
 }
 
 @end
