@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42296F39265932CD007372AE /* SwiftLintXPC.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = 429D8B712659328D00BF9FB9 /* SwiftLintXPC.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		429D8B762659328D00BF9FB9 /* SwiftLintXPC.m in Sources */ = {isa = PBXBuildFile; fileRef = 429D8B752659328D00BF9FB9 /* SwiftLintXPC.m */; };
+		429D8B782659328D00BF9FB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 429D8B772659328D00BF9FB9 /* main.m */; };
+		429D8B7C2659328D00BF9FB9 /* SwiftLintXPC.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = 429D8B712659328D00BF9FB9 /* SwiftLintXPC.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		42EF8BCC26580CF40041B923 /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FD41F7265806DD00D0FCBB /* XcodeKit.framework */; };
+		42EF8BCD26580CF40041B923 /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42FD41F7265806DD00D0FCBB /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		42FD41C4265800EE00D0FCBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD41C3265800EE00D0FCBB /* AppDelegate.swift */; };
 		42FD41C6265800EE00D0FCBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD41C5265800EE00D0FCBB /* ViewController.swift */; };
 		42FD41C8265800F100D0FCBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42FD41C7265800F100D0FCBB /* Assets.xcassets */; };
@@ -14,13 +20,19 @@
 		42FD41D7265800F200D0FCBB /* SwiftLintPluginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD41D6265800F200D0FCBB /* SwiftLintPluginTests.swift */; };
 		42FD41E2265800F200D0FCBB /* SwiftLintPluginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD41E1265800F200D0FCBB /* SwiftLintPluginUITests.swift */; };
 		42FD41F6265806DD00D0FCBB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FD41F5265806DD00D0FCBB /* Cocoa.framework */; };
-		42FD41F8265806DD00D0FCBB /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FD41F7265806DD00D0FCBB /* XcodeKit.framework */; };
 		42FD41FB265806DD00D0FCBB /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD41FA265806DD00D0FCBB /* SourceEditorExtension.swift */; };
 		42FD41FD265806DD00D0FCBB /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD41FC265806DD00D0FCBB /* SourceEditorCommand.swift */; };
 		42FD4202265806DD00D0FCBB /* XcodeEx.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 42FD41F3265806DD00D0FCBB /* XcodeEx.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		429D8B7A2659328D00BF9FB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42FD41B8265800EE00D0FCBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 429D8B702659328D00BF9FB9;
+			remoteInfo = SwiftLintXPC;
+		};
 		42FD41D3265800F200D0FCBB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 42FD41B8265800EE00D0FCBB /* Project object */;
@@ -45,6 +57,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		42296F38265932BD007372AE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				42296F39265932CD007372AE /* SwiftLintXPC.xpc in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		429D8B802659328D00BF9FB9 /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				429D8B7C2659328D00BF9FB9 /* SwiftLintXPC.xpc in Embed XPC Services */,
+			);
+			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42EF8BCE26580CF40041B923 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				42EF8BCD26580CF40041B923 /* XcodeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		42FD4206265806DD00D0FCBB /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -59,6 +103,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		42296F3B26593310007372AE /* XcodeEx-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XcodeEx-Bridging-Header.h"; sourceTree = "<group>"; };
+		429D8B712659328D00BF9FB9 /* SwiftLintXPC.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = SwiftLintXPC.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		429D8B732659328D00BF9FB9 /* SwiftLintXPCProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftLintXPCProtocol.h; sourceTree = "<group>"; };
+		429D8B742659328D00BF9FB9 /* SwiftLintXPC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftLintXPC.h; sourceTree = "<group>"; };
+		429D8B752659328D00BF9FB9 /* SwiftLintXPC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftLintXPC.m; sourceTree = "<group>"; };
+		429D8B772659328D00BF9FB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		429D8B792659328D00BF9FB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42FD41C0265800EE00D0FCBB /* SwiftLintPlugin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLintPlugin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FD41C3265800EE00D0FCBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42FD41C5265800EE00D0FCBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +133,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		429D8B6E2659328D00BF9FB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		42FD41BD265800EE00D0FCBB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -108,13 +166,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				42FD41F6265806DD00D0FCBB /* Cocoa.framework in Frameworks */,
-				42FD41F8265806DD00D0FCBB /* XcodeKit.framework in Frameworks */,
+				42EF8BCC26580CF40041B923 /* XcodeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		429D8B722659328D00BF9FB9 /* SwiftLintXPC */ = {
+			isa = PBXGroup;
+			children = (
+				429D8B732659328D00BF9FB9 /* SwiftLintXPCProtocol.h */,
+				429D8B742659328D00BF9FB9 /* SwiftLintXPC.h */,
+				429D8B752659328D00BF9FB9 /* SwiftLintXPC.m */,
+				429D8B772659328D00BF9FB9 /* main.m */,
+				429D8B792659328D00BF9FB9 /* Info.plist */,
+			);
+			path = SwiftLintXPC;
+			sourceTree = "<group>";
+		};
 		42FD41B7265800EE00D0FCBB = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +192,7 @@
 				42FD41D5265800F200D0FCBB /* SwiftLintPluginTests */,
 				42FD41E0265800F200D0FCBB /* SwiftLintPluginUITests */,
 				42FD41F9265806DD00D0FCBB /* XcodeEx */,
+				429D8B722659328D00BF9FB9 /* SwiftLintXPC */,
 				42FD41F4265806DD00D0FCBB /* Frameworks */,
 				42FD41C1265800EE00D0FCBB /* Products */,
 			);
@@ -134,6 +205,7 @@
 				42FD41D2265800F200D0FCBB /* SwiftLintPluginTests.xctest */,
 				42FD41DD265800F200D0FCBB /* SwiftLintPluginUITests.xctest */,
 				42FD41F3265806DD00D0FCBB /* XcodeEx.appex */,
+				429D8B712659328D00BF9FB9 /* SwiftLintXPC.xpc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -185,6 +257,7 @@
 				42FD41FC265806DD00D0FCBB /* SourceEditorCommand.swift */,
 				42FD41FE265806DD00D0FCBB /* Info.plist */,
 				42FD41FF265806DD00D0FCBB /* XcodeEx.entitlements */,
+				42296F3B26593310007372AE /* XcodeEx-Bridging-Header.h */,
 			);
 			path = XcodeEx;
 			sourceTree = "<group>";
@@ -192,6 +265,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		429D8B702659328D00BF9FB9 /* SwiftLintXPC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 429D8B7D2659328D00BF9FB9 /* Build configuration list for PBXNativeTarget "SwiftLintXPC" */;
+			buildPhases = (
+				429D8B6D2659328D00BF9FB9 /* Sources */,
+				429D8B6E2659328D00BF9FB9 /* Frameworks */,
+				429D8B6F2659328D00BF9FB9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftLintXPC;
+			productName = SwiftLintXPC;
+			productReference = 429D8B712659328D00BF9FB9 /* SwiftLintXPC.xpc */;
+			productType = "com.apple.product-type.xpc-service";
+		};
 		42FD41BF265800EE00D0FCBB /* SwiftLintPlugin */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42FD41E6265800F200D0FCBB /* Build configuration list for PBXNativeTarget "SwiftLintPlugin" */;
@@ -200,11 +290,13 @@
 				42FD41BD265800EE00D0FCBB /* Frameworks */,
 				42FD41BE265800EE00D0FCBB /* Resources */,
 				42FD4206265806DD00D0FCBB /* Embed App Extensions */,
+				429D8B802659328D00BF9FB9 /* Embed XPC Services */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				42FD4201265806DD00D0FCBB /* PBXTargetDependency */,
+				429D8B7B2659328D00BF9FB9 /* PBXTargetDependency */,
 			);
 			name = SwiftLintPlugin;
 			productName = SwiftLintPlugin;
@@ -254,6 +346,8 @@
 				42FD41EF265806DD00D0FCBB /* Sources */,
 				42FD41F0265806DD00D0FCBB /* Frameworks */,
 				42FD41F1265806DD00D0FCBB /* Resources */,
+				42EF8BCE26580CF40041B923 /* Embed Frameworks */,
+				42296F38265932BD007372AE /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -273,6 +367,9 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					429D8B702659328D00BF9FB9 = {
+						CreatedOnToolsVersion = 12.5;
+					};
 					42FD41BF265800EE00D0FCBB = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -286,6 +383,7 @@
 					};
 					42FD41F2265806DD00D0FCBB = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -306,11 +404,19 @@
 				42FD41D1265800F200D0FCBB /* SwiftLintPluginTests */,
 				42FD41DC265800F200D0FCBB /* SwiftLintPluginUITests */,
 				42FD41F2265806DD00D0FCBB /* XcodeEx */,
+				429D8B702659328D00BF9FB9 /* SwiftLintXPC */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		429D8B6F2659328D00BF9FB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		42FD41BE265800EE00D0FCBB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -344,6 +450,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		429D8B6D2659328D00BF9FB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				429D8B782659328D00BF9FB9 /* main.m in Sources */,
+				429D8B762659328D00BF9FB9 /* SwiftLintXPC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		42FD41BC265800EE00D0FCBB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -381,6 +496,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		429D8B7B2659328D00BF9FB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 429D8B702659328D00BF9FB9 /* SwiftLintXPC */;
+			targetProxy = 429D8B7A2659328D00BF9FB9 /* PBXContainerItemProxy */;
+		};
 		42FD41D4265800F200D0FCBB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 42FD41BF265800EE00D0FCBB /* SwiftLintPlugin */;
@@ -410,6 +530,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		429D8B7E2659328D00BF9FB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = WLCQDVKTS9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = SwiftLintXPC/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.p-x9.SwiftLintXPC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		429D8B7F2659328D00BF9FB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = WLCQDVKTS9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = SwiftLintXPC/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.p-x9.SwiftLintXPC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		42FD41E4265800F200D0FCBB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -656,6 +804,7 @@
 		42FD4204265806DD00D0FCBB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XcodeEx/XcodeEx.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -670,6 +819,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.p-x9.SwiftLintPlugin.XcodeEx";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "XcodeEx/XcodeEx-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -677,6 +828,7 @@
 		42FD4205265806DD00D0FCBB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = XcodeEx/XcodeEx.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -691,6 +843,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.p-x9.SwiftLintPlugin.XcodeEx";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "XcodeEx/XcodeEx-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -698,6 +851,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		429D8B7D2659328D00BF9FB9 /* Build configuration list for PBXNativeTarget "SwiftLintXPC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				429D8B7E2659328D00BF9FB9 /* Debug */,
+				429D8B7F2659328D00BF9FB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		42FD41BB265800EE00D0FCBB /* Build configuration list for PBXProject "SwiftLintPlugin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
