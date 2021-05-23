@@ -111,6 +111,7 @@
 		42692BA6265A26F800A2CCAE /* XcodeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XcodeHelper.h; sourceTree = "<group>"; };
 		42910794265A5FF2008F38F5 /* SwiftLintHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftLintHelper.m; sourceTree = "<group>"; };
 		42910796265A6001008F38F5 /* SwiftLintHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftLintHelper.h; sourceTree = "<group>"; };
+		42910798265A7D4B008F38F5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		429D8B712659328D00BF9FB9 /* SwiftLintXPC.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = SwiftLintXPC.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
 		429D8B732659328D00BF9FB9 /* SwiftLintXPCProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftLintXPCProtocol.h; sourceTree = "<group>"; };
 		429D8B742659328D00BF9FB9 /* SwiftLintXPC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftLintXPC.h; sourceTree = "<group>"; };
@@ -205,6 +206,7 @@
 		42FD41B7265800EE00D0FCBB = {
 			isa = PBXGroup;
 			children = (
+				42910798265A7D4B008F38F5 /* README.md */,
 				42FD41C2265800EE00D0FCBB /* SwiftLintPlugin */,
 				42FD41D5265800F200D0FCBB /* SwiftLintPluginTests */,
 				42FD41E0265800F200D0FCBB /* SwiftLintPluginUITests */,
