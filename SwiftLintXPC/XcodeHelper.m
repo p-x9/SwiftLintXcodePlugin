@@ -31,6 +31,10 @@
     return [[self.xcodeApp activeWorkspaceDocument] path];
 }
 
+- (NSString *)activeProjectFolderPath {
+    return [[self activeWorkspaceDocumentPath] stringByDeletingLastPathComponent];
+}
+
 //TODO: 違うフォルダの同名ファイルの判別
 //TODO: modifiedなファイルの扱い
 - (NSString *)currentFilePath {

@@ -10,6 +10,7 @@
 
 @interface XcodeHelper : NSObject
 - (NSString *)activeWorkspaceDocumentPath;
+- (NSString *)activeProjectFolderPath;
 - (NSString *)currentFilePath;
 - (NSString *)defaultSwiftLintYmlPath;
 - (void)save;

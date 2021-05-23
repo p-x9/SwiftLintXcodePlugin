@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		42296F39265932CD007372AE /* SwiftLintXPC.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = 429D8B712659328D00BF9FB9 /* SwiftLintXPC.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		42692BA5265A26A000A2CCAE /* XcodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 42692BA4265A26A000A2CCAE /* XcodeHelper.m */; };
+		42910795265A5FF2008F38F5 /* SwiftLintHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 42910794265A5FF2008F38F5 /* SwiftLintHelper.m */; };
 		429D8B762659328D00BF9FB9 /* SwiftLintXPC.m in Sources */ = {isa = PBXBuildFile; fileRef = 429D8B752659328D00BF9FB9 /* SwiftLintXPC.m */; };
 		429D8B782659328D00BF9FB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 429D8B772659328D00BF9FB9 /* main.m */; };
 		429D8B7C2659328D00BF9FB9 /* SwiftLintXPC.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = 429D8B712659328D00BF9FB9 /* SwiftLintXPC.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -108,6 +109,8 @@
 		42296F3B26593310007372AE /* XcodeEx-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XcodeEx-Bridging-Header.h"; sourceTree = "<group>"; };
 		42692BA4265A26A000A2CCAE /* XcodeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XcodeHelper.m; sourceTree = "<group>"; };
 		42692BA6265A26F800A2CCAE /* XcodeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XcodeHelper.h; sourceTree = "<group>"; };
+		42910794265A5FF2008F38F5 /* SwiftLintHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftLintHelper.m; sourceTree = "<group>"; };
+		42910796265A6001008F38F5 /* SwiftLintHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftLintHelper.h; sourceTree = "<group>"; };
 		429D8B712659328D00BF9FB9 /* SwiftLintXPC.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = SwiftLintXPC.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
 		429D8B732659328D00BF9FB9 /* SwiftLintXPCProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftLintXPCProtocol.h; sourceTree = "<group>"; };
 		429D8B742659328D00BF9FB9 /* SwiftLintXPC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftLintXPC.h; sourceTree = "<group>"; };
@@ -191,6 +194,8 @@
 				429D8B752659328D00BF9FB9 /* SwiftLintXPC.m */,
 				42692BA6265A26F800A2CCAE /* XcodeHelper.h */,
 				42692BA4265A26A000A2CCAE /* XcodeHelper.m */,
+				42910796265A6001008F38F5 /* SwiftLintHelper.h */,
+				42910794265A5FF2008F38F5 /* SwiftLintHelper.m */,
 				429D8B772659328D00BF9FB9 /* main.m */,
 				429D8B792659328D00BF9FB9 /* Info.plist */,
 			);
@@ -470,6 +475,7 @@
 				429D8B782659328D00BF9FB9 /* main.m in Sources */,
 				42692BA5265A26A000A2CCAE /* XcodeHelper.m in Sources */,
 				429D8B762659328D00BF9FB9 /* SwiftLintXPC.m in Sources */,
+				42910795265A5FF2008F38F5 /* SwiftLintHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
