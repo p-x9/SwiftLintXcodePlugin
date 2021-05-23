@@ -13,7 +13,8 @@
 
 // Replace the API of this protocol with an API appropriate to the service you are vending.
 - (void)activeWorkspaceDocumentPath:(void (^)(NSString *))reply;
-    
+- (void)currentFilePath:(void (^)(NSString *))reply;
+- (void)defaultSwiftLintYmlPath:(void (^)(NSString *))reply;
 @end
 
 /*
