@@ -11,13 +11,10 @@ import Cocoa
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    
-
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        let targetAEDescriptor: NSAppleEventDescriptor = NSAppleEventDescriptor(bundleIdentifier: "com.apple.dt.Xcode")
+        let targetAEDescriptor = NSAppleEventDescriptor(bundleIdentifier: "com.apple.dt.Xcode")
         let status: OSStatus = AEDeterminePermissionToAutomateTarget(targetAEDescriptor.aeDesc, typeWildCard, typeWildCard, true)
-        
+
         switch status {
         case noErr:
            return
@@ -34,6 +31,4 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
 
-
 }
-
