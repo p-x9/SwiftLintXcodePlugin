@@ -25,7 +25,7 @@
 		42FD41F6265806DD00D0FCBB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FD41F5265806DD00D0FCBB /* Cocoa.framework */; };
 		42FD41FB265806DD00D0FCBB /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD41FA265806DD00D0FCBB /* SourceEditorExtension.swift */; };
 		42FD41FD265806DD00D0FCBB /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD41FC265806DD00D0FCBB /* SourceEditorCommand.swift */; };
-		42FD4202265806DD00D0FCBB /* XcodeEx.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 42FD41F3265806DD00D0FCBB /* XcodeEx.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		42FD4202265806DD00D0FCBB /* SwiftLint.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 42FD41F3265806DD00D0FCBB /* SwiftLint.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,7 +98,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				42FD4202265806DD00D0FCBB /* XcodeEx.appex in Embed App Extensions */,
+				42FD4202265806DD00D0FCBB /* SwiftLint.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,7 +133,7 @@
 		42FD41DD265800F200D0FCBB /* SwiftLintPluginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLintPluginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FD41E1265800F200D0FCBB /* SwiftLintPluginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLintPluginUITests.swift; sourceTree = "<group>"; };
 		42FD41E3265800F200D0FCBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		42FD41F3265806DD00D0FCBB /* XcodeEx.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = XcodeEx.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		42FD41F3265806DD00D0FCBB /* SwiftLint.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SwiftLint.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		42FD41F5265806DD00D0FCBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		42FD41F7265806DD00D0FCBB /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 		42FD41FA265806DD00D0FCBB /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
@@ -221,7 +221,7 @@
 				42FD41C0265800EE00D0FCBB /* SwiftLintPlugin.app */,
 				42FD41D2265800F200D0FCBB /* SwiftLintPluginTests.xctest */,
 				42FD41DD265800F200D0FCBB /* SwiftLintPluginUITests.xctest */,
-				42FD41F3265806DD00D0FCBB /* XcodeEx.appex */,
+				42FD41F3265806DD00D0FCBB /* SwiftLint.appex */,
 				429D8B712659328D00BF9FB9 /* SwiftLintXPC.xpc */,
 			);
 			name = Products;
@@ -374,7 +374,7 @@
 			);
 			name = XcodeEx;
 			productName = XcodeEx;
-			productReference = 42FD41F3265806DD00D0FCBB /* XcodeEx.appex */;
+			productReference = 42FD41F3265806DD00D0FCBB /* SwiftLint.appex */;
 			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
@@ -865,7 +865,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.p-x9.SwiftLintPlugin.XcodeEx";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SwiftLint;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "XcodeEx/XcodeEx-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -889,7 +889,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.p-x9.SwiftLintPlugin.XcodeEx";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SwiftLint;
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "XcodeEx/XcodeEx-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
