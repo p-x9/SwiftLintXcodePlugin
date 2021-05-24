@@ -16,10 +16,26 @@ class ViewController: NSViewController {
         }
     }
 
+    @IBOutlet private var swiftlintPathPopUpButton: NSPopUpButton!
+    @IBOutlet private var swiftlintPathTextField: NSTextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+
+    @IBAction private func handleSwiftLintPathButton(_ sender: Any) {
+        switch swiftlintPathPopUpButton.indexOfSelectedItem {
+        case 0:// default
+            break
+        case 1:// custom
+            break
+        case 2:// relative
+            break
+        default:
+            break
+        }
     }
 
 }
