@@ -8,6 +8,7 @@
 
 import Foundation
 import XcodeKit
+import Defaults
 
 class SourceEditorCommand: NSObject, XCSourceEditorCommand {
     class var commandIdentifier: String {
@@ -43,6 +44,7 @@ class AutoCorrectFileCommand: SourceEditorCommand {
 
         let swiftLintXpc = connection.remoteObjectProxy as! SwiftLintXPCProtocol
 
+        swiftLintXpc.setSwiftLintPath(PATH.swiftLintPath, relativePath: Defaults[.swiftlintPathMode] == .relative)
         swiftLintXpc.autocorrectCurrentFile {
             if $0 {
                 completionHandler(nil)
@@ -69,6 +71,7 @@ class AutoCorrectProjectCommand: SourceEditorCommand {
 
         let swiftLintXpc = connection.remoteObjectProxy as! SwiftLintXPCProtocol
 
+        swiftLintXpc.setSwiftLintPath(PATH.swiftLintPath, relativePath: Defaults[.swiftlintPathMode] == .relative)
         swiftLintXpc.autocorrectProject {
             if $0 {
                 completionHandler(nil)

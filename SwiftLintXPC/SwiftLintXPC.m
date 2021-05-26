@@ -25,6 +25,16 @@
     return self;
 }
 
+- (void)setSwiftLintPath:(NSString *)path relativePath:(BOOL)isRelative{
+    if(isRelative){
+        NSString *resolvedPath = [self.xcodeHelper.activeProjectFolderPath stringByAppendingPathComponent:path];
+        self.swiftlintHelper.swiftLintPath = resolvedPath;
+    }
+    else{
+        self.swiftlintHelper.swiftLintPath = path;
+    }
+}
+
 - (void)activeWorkspaceDocumentPath:(void (^)(NSString *))reply {
    reply([self.xcodeHelper activeWorkspaceDocumentPath]);
 }

@@ -12,6 +12,7 @@
 @protocol SwiftLintXPCProtocol
 
 // Replace the API of this protocol with an API appropriate to the service you are vending.
+- (void)setSwiftLintPath:(NSString *)path relativePath:(BOOL)isRelative;
 - (void)activeWorkspaceDocumentPath:(void (^)(NSString *))reply;
 - (void)activeProjectFolderPath:(void (^)(NSString *))reply;
 - (void)currentFilePath:(void (^)(NSString *))reply;

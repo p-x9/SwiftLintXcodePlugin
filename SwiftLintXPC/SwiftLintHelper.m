@@ -29,7 +29,11 @@
 }
 
 - (void)runSwiftLint:(NSArray<NSString *>*)arguments {
-    [self runCommand:SwiftLintHelper.defaultSwiftLintPath withArguments:arguments];
+    NSString *swiftLintPath = self.swiftLintPath;
+    if(!swiftLintPath){
+        swiftLintPath = SwiftLintHelper.defaultSwiftLintPath;
+    }
+    [self runCommand:swiftLintPath withArguments:arguments];
 }
 
 - (void)runCommand:(NSString *)commandPath withArguments:(NSArray<NSString *>*)arguments {

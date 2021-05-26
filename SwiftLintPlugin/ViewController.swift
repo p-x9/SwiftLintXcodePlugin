@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Defaults
 
 class ViewController: NSViewController {
 
@@ -16,8 +17,22 @@ class ViewController: NSViewController {
         }
     }
 
-    @IBOutlet private var swiftlintPathPopUpButton: NSPopUpButton!
-    @IBOutlet private var swiftlintPathTextField: NSTextField!
+    @IBOutlet private var swiftlintPathPopUpButton: NSPopUpButton! {
+        didSet {
+            swiftlintPathPopUpButton.selectItem(at: Defaults[.swiftlintPathMode].rawValue)
+        }
+    }
+    @IBOutlet private var swiftlintPathTextField: NSTextField! {
+        didSet {
+            swiftlintPathTextField.delegate = self
+            if Defaults[.swiftlintPathMode] == .default {
+                swiftlintPathTextField.isEditable = false
+                swiftlintPathTextField.stringValue = DEFINE.defaultSwiftLintPath
+            } else {
+                swiftlintPathTextField.stringValue = Defaults[.swiftlintPath]
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,16 +41,37 @@ class ViewController: NSViewController {
     }
 
     @IBAction private func handleSwiftLintPathButton(_ sender: Any) {
-        switch swiftlintPathPopUpButton.indexOfSelectedItem {
+        let selectedIndex = swiftlintPathPopUpButton.indexOfSelectedItem
+        Defaults[.swiftlintPathMode] = FilePathMode(rawValue: selectedIndex) ?? .default
+
+        switch selectedIndex {
         case 0:// default
-            break
+            swiftlintPathTextField.isEditable = false
+            swiftlintPathTextField.stringValue = DEFINE.defaultSwiftLintPath
         case 1:// custom
-            break
+            swiftlintPathTextField.isEditable = true
+            swiftlintPathTextField.stringValue = Defaults[.swiftlintPath]
         case 2:// relative
-            break
+            swiftlintPathTextField.isEditable = true
+            swiftlintPathTextField.stringValue = Defaults[.swiftlintPath]
         default:
             break
         }
     }
 
+}
+
+extension ViewController: NSTextFieldDelegate {
+    func controlTextDidChange(_ obj: Notification) {
+        guard let textField = obj.object as? NSTextField else {
+            return
+        }
+
+        switch textField {
+        case swiftlintPathTextField:
+            Defaults[.swiftlintPath] = textField.stringValue
+        default:
+            break
+        }
+    }
 }
