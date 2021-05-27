@@ -8,3 +8,11 @@
 ## Demo
 
 ![Demo](Resources/demo.gif)
+
+## Usage
+1. Set SwiftLint Path
+- default: Default path is `/usr/local/bin/swiftlint`
+- relative: Relative path with the current project folder as the basis.
+- custom: Absolute path
+
+![Screen1](Resources/screen1.png)
