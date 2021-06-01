@@ -38,6 +38,7 @@
 //TODO: 違うフォルダの同名ファイルの判別
 //TODO: modifiedなファイルの扱い
 - (NSString *)currentFilePath {
+    [self save];
     XcodeWindow *window = [self.xcodeApp windows].firstObject;
     NSArray<XcodeDocument *> *documents = [self.xcodeApp documents];
     NSInteger index = [documents indexOfObjectPassingTest:^BOOL(XcodeDocument * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -55,7 +56,13 @@
 }
 
 - (void)save {
-    
+    NSArray<XcodeDocument*> *documents = [self.xcodeApp documents];
+    [documents enumerateObjectsUsingBlock:^(XcodeDocument *obj, NSUInteger idx, BOOL *stop) {
+        if(![[obj.path pathExtension] isEqualToString:@"swift"]) return;
+        NSData *data = [[NSData alloc] initWithContentsOfFile:obj.path];
+        [data writeToFile:obj.path atomically:YES];
+        
+    }];
 }
 
 @end
