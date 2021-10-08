@@ -48,11 +48,20 @@
     
     [task launch];
     [task waitUntilExit];
-    
-    if (task.terminationStatus == 0){
-        NSData *errorData = [standardError.fileHandleForReading readDataToEndOfFile];
-        NSString *errorString = [[NSString alloc] initWithData:errorData encoding:NSUTF8StringEncoding];
-        NSLog(@"%@", errorString);
+   
+    if (![task isRunning]){
+        int status = task.terminationStatus;
+        NSData *data = [standardOutput.fileHandleForReading readDataToEndOfFile];
+        NSString *output = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        
+        switch (status) {
+            case 0: //Succeed
+                NSLog(@"Succeed: %@", output);
+                break;
+            default: //Faild
+                NSLog(@"Faild: %@", output);
+                break;
+        }
     }
 }
 
