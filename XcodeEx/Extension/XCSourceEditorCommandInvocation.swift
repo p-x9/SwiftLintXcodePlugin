@@ -26,14 +26,13 @@ extension XCSourceEditorCommandInvocation {
         }.joined()
     }
 
-    //FIXME: check utf16 index
     func selectedString(at selectionIndex: Int) -> String? {
         guard let lines = self.buffer.lines as? [String],
               let selection = self.buffer.selections[selectionIndex] as? XCSourceTextRange else {
                   return nil
         }
 
-        return (selection.start.line...selection.end.line).map { row -> String in
+        return (selection.start.line...selection.end.line).compactMap { row -> String? in
             let line = lines[row]
 
             let isStartLine = row == selection.start.line
@@ -42,10 +41,7 @@ extension XCSourceEditorCommandInvocation {
             let start = isStartLine ? selection.start.column : 0
             let end = isEndLine ? selection.end.column : line.count - 1
 
-            let startIndex = line.index(line.startIndex, offsetBy: start)
-            let endIndex = line.index(line.startIndex, offsetBy: end)
-
-            return String(line[startIndex ..< endIndex])
+            return line[NSRange(location: start, length: end - start + 1)]
         }.joined()
 
     }
