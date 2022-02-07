@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Carbon/Carbon.h>
 #import "Xcode.h"
 #import "XcodeHelper.h"
 
@@ -63,6 +64,19 @@
         [data writeToFile:obj.path atomically:YES];
         
     }];
+}
+
+- (void)xcodeFormatShortcut {
+    CGEventSourceRef source = CGEventSourceCreate(kCGEventSourceStateHIDSystemState);
+    
+    CGEventRef i = CGEventCreateKeyboardEvent(source, kVK_ANSI_I, true);
+    CGEventSetFlags(i, kCGEventFlagMaskControl);
+    CGEventTapLocation location = kCGHIDEventTap;
+    
+    CGEventPost(location, i);
+    
+    CFRelease(i);
+    CFRelease(source);
 }
 
 @end

@@ -54,7 +54,12 @@
 //TODO: error handling
 - (void)autocorrectCurrentFile:(void (^)(BOOL))completion {
     NSString *filePath = [self.xcodeHelper currentFilePath];
-    [self.swiftlintHelper autoCorrect:filePath withRule:NULL];
+    [self autocorrectFileAt:filePath withCompletion:completion];
+}
+
+//TODO: error handling
+- (void)autocorrectFileAt:(NSString *)path withCompletion:(void (^)(BOOL))completion {
+    [self.swiftlintHelper autoCorrect:path withRule:NULL];
     completion(true);
 }
 
@@ -63,6 +68,10 @@
     NSString *projectPath = [self.xcodeHelper activeProjectFolderPath];
     [self.swiftlintHelper autoCorrect:projectPath withRule:NULL];
     completion(true);
+}
+
+- (void)xcodeFormatShortcut {
+    [self.xcodeHelper xcodeFormatShortcut];
 }
 
 @end
