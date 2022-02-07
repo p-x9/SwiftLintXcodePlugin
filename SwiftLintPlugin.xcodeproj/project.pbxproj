@@ -27,6 +27,7 @@
 		42AAEAE227B1B40000F1D977 /* AutoCorrectFileCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AAEAE127B1B40000F1D977 /* AutoCorrectFileCommand.swift */; };
 		42AAEAE427B1B42900F1D977 /* AutoCorrectProjectCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AAEAE327B1B42900F1D977 /* AutoCorrectProjectCommand.swift */; };
 		42AAEAE627B1B4F600F1D977 /* XcodeCommandError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AAEAE527B1B4F600F1D977 /* XcodeCommandError.swift */; };
+		42AAEAE927B1BB8900F1D977 /* XCSourceEditorCommandInvocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AAEAE827B1BB8900F1D977 /* XCSourceEditorCommandInvocation.swift */; };
 		42BD1FE3265969110040AD85 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42BD1FE2265969110040AD85 /* ScriptingBridge.framework */; };
 		42EF8BCC26580CF40041B923 /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FD41F7265806DD00D0FCBB /* XcodeKit.framework */; };
 		42EF8BCD26580CF40041B923 /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42FD41F7265806DD00D0FCBB /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -140,6 +141,7 @@
 		42AAEAE127B1B40000F1D977 /* AutoCorrectFileCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCorrectFileCommand.swift; sourceTree = "<group>"; };
 		42AAEAE327B1B42900F1D977 /* AutoCorrectProjectCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCorrectProjectCommand.swift; sourceTree = "<group>"; };
 		42AAEAE527B1B4F600F1D977 /* XcodeCommandError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeCommandError.swift; sourceTree = "<group>"; };
+		42AAEAE827B1BB8900F1D977 /* XCSourceEditorCommandInvocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCSourceEditorCommandInvocation.swift; sourceTree = "<group>"; };
 		42BD1FDF265967C70040AD85 /* Xcode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Xcode.h; sourceTree = "<group>"; };
 		42BD1FE2265969110040AD85 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
 		42BD1FE426596F110040AD85 /* SwiftLintXPC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftLintXPC.entitlements; sourceTree = "<group>"; };
@@ -237,6 +239,14 @@
 			path = Commands;
 			sourceTree = "<group>";
 		};
+		42AAEAE727B1BB7700F1D977 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				42AAEAE827B1BB8900F1D977 /* XCSourceEditorCommandInvocation.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		42FD41B7265800EE00D0FCBB = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +321,7 @@
 		42FD41F9265806DD00D0FCBB /* XcodeEx */ = {
 			isa = PBXGroup;
 			children = (
+				42AAEAE727B1BB7700F1D977 /* Extension */,
 				42FD41FA265806DD00D0FCBB /* SourceEditorExtension.swift */,
 				42FD41FC265806DD00D0FCBB /* SourceEditorCommand.swift */,
 				42AAEADD27B1B3A600F1D977 /* Commands */,
@@ -586,6 +597,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				421CEBCB265EB14200FD1A2F /* Defaults.Keys.swift in Sources */,
+				42AAEAE927B1BB8900F1D977 /* XCSourceEditorCommandInvocation.swift in Sources */,
 				42AAEAE227B1B40000F1D977 /* AutoCorrectFileCommand.swift in Sources */,
 				421CEBC5265EA91300FD1A2F /* DEFINE.swift in Sources */,
 				42AAEADF27B1B3CD00F1D977 /* AutoCorrectSelectedRangeCommand.swift in Sources */,

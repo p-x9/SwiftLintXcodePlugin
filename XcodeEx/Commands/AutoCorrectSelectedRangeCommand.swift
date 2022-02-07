@@ -24,23 +24,12 @@ class AutoCorrectSelectedRangeCommand: SourceEditorCommand {
         connection.remoteObjectInterface = NSXPCInterface(with: SwiftLintXPCProtocol.self)
         connection.resume()
 
-        guard let lines = invocation.buffer.lines as? [String],
-              let selection = invocation.buffer.selections.firstObject as? XCSourceTextRange else {
+        guard let selection = invocation.buffer.selections.firstObject as? XCSourceTextRange,
+              let text = invocation.selectedString(at: 0),
+              let url = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first else {
                   return
         }
 
-        let text: String = (selection.start.line...selection.end.line).map { row -> String in
-            let line = lines[row]
-
-            let startIndex = line.index(line.startIndex, offsetBy: 0)
-            let endIndex = line.index(line.startIndex, offsetBy: line.utf8CString.count - 1)
-
-            return String(line[startIndex ..< endIndex])
-        }.joined(separator: " ")
-
-        guard let url = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first else {
-            return
-        }
         let tmpFile = url.appendingPathComponent("tmp.swift")
         do {
             try text.write(to: tmpFile, atomically: true, encoding: .utf8)
@@ -60,11 +49,18 @@ class AutoCorrectSelectedRangeCommand: SourceEditorCommand {
                           return
                       }
                 let lines = content.split(separator: "\n").map { String($0) }
+
                 lines.enumerated().forEach { index, line in
                     if index < invocation.buffer.lines.count {
                         invocation.buffer.lines[index + selection.start.line] = line
                     } else {
                         invocation.buffer.lines.insert(line, at: index)
+                    }
+                }
+                let selectedLineCount = selection.end.line - selection.start.line + 1
+                if lines.count < selectedLineCount {
+                    (selection.start.line + lines.count...selection.end.line).forEach { index in
+                        invocation.buffer.lines[index] = ""
                     }
                 }
                 swiftLintXpc.xcodeFormatShortcut()
