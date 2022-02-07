@@ -19,6 +19,8 @@
 - (void)defaultSwiftLintYmlPath:(void (^)(NSString *))reply;
 - (void)autocorrectCurrentFile:(void (^)(BOOL))completion;
 - (void)autocorrectProject:(void (^)(BOOL))completion;
+- (void)autocorrectFileAt:(NSString *)path withCompletion:(void (^)(BOOL))completion;
+- (void)xcodeFormatShortcut;
 @end
 
 /*

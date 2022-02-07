@@ -14,5 +14,6 @@
 - (NSString *)currentFilePath;
 - (NSString *)defaultSwiftLintYmlPath;
 - (void)save;
+- (void)xcodeFormatShortcut;
 @end
 
