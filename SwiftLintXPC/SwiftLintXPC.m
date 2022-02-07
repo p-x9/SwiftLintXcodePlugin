@@ -51,23 +51,20 @@
     reply([self.xcodeHelper defaultSwiftLintYmlPath]);
 }
 
-//TODO: error handling
 - (void)autocorrectCurrentFile:(void (^)(BOOL))completion {
     NSString *filePath = [self.xcodeHelper currentFilePath];
     [self autocorrectFileAt:filePath withCompletion:completion];
 }
 
-//TODO: error handling
 - (void)autocorrectFileAt:(NSString *)path withCompletion:(void (^)(BOOL))completion {
-    [self.swiftlintHelper autoCorrect:path withRule:NULL];
-    completion(true);
+    int status = [self.swiftlintHelper autoCorrect:path withRule:NULL];
+    completion(status == 0);
 }
 
-//TODO: error handling
 - (void)autocorrectProject:(void (^)(BOOL))completion {
     NSString *projectPath = [self.xcodeHelper activeProjectFolderPath];
-    [self.swiftlintHelper autoCorrect:projectPath withRule:NULL];
-    completion(true);
+    int status = [self.swiftlintHelper autoCorrect:projectPath withRule:NULL];
+    completion(status == 0);
 }
 
 - (void)xcodeFormatShortcut {

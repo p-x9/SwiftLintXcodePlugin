@@ -10,6 +10,6 @@
 
 @interface SwiftLintHelper : NSObject
 @property (nonatomic,retain) NSString * _Nullable swiftLintPath;
-- (void)runSwiftLint:(NSArray<NSString *>*_Nonnull)arguments;
-- (void)autoCorrect:(NSString *_Nonnull)path withRule:(NSString* _Nullable)rulePath;
+- (int)runSwiftLint:(NSArray<NSString *>*_Nonnull)arguments;
+- (int)autoCorrect:(NSString *_Nonnull)path withRule:(NSString* _Nullable)rulePath;
 @end

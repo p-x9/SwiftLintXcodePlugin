@@ -70,8 +70,8 @@ class AutoCorrectSelectedRangeCommand: SourceEditorCommand {
         let swiftLintXpc = connection.remoteObjectProxy as! SwiftLintXPCProtocol
 
         swiftLintXpc.setSwiftLintPath(PATH.swiftLintPath, relativePath: Defaults[.swiftlintPathMode] == .relative)
-        swiftLintXpc.autocorrectFile(at: tmpFile.path) {
-            if $0 {
+        swiftLintXpc.autocorrectFile(at: tmpFile.path) { isCompleted in
+            if isCompleted {
                 guard FileManager.default.fileExists(atPath: tmpFile.path),
                       let content = try? String(contentsOf: tmpFile) else {
                           completionHandler(NSError(domain: "Not existed swift file", code: 0))
@@ -111,8 +111,8 @@ class AutoCorrectFileCommand: SourceEditorCommand {
         let swiftLintXpc = connection.remoteObjectProxy as! SwiftLintXPCProtocol
 
         swiftLintXpc.setSwiftLintPath(PATH.swiftLintPath, relativePath: Defaults[.swiftlintPathMode] == .relative)
-        swiftLintXpc.autocorrectCurrentFile {
-            if $0 {
+        swiftLintXpc.autocorrectCurrentFile { isCompleted in
+            if isCompleted {
                 completionHandler(nil)
             }
             completionHandler(nil)
