@@ -56,7 +56,7 @@ class AutoCorrectSelectedRangeCommand: SourceEditorCommand {
             if isCompleted {
                 guard FileManager.default.fileExists(atPath: tmpFile.path),
                       let content = try? String(contentsOf: tmpFile) else {
-                          completionHandler(NSError(domain: "Not existed swift file", code: 0))
+                          completionHandler(XcodeCommandError.fileNotFound)
                           return
                       }
                 let lines = content.split(separator: "\n").map { String($0) }
@@ -70,7 +70,7 @@ class AutoCorrectSelectedRangeCommand: SourceEditorCommand {
                 swiftLintXpc.xcodeFormatShortcut()
                 completionHandler(nil)
             } else {
-                completionHandler(NSError(domain: "failed to run xpc action", code: 0))
+                completionHandler(XcodeCommandError.swiftlintError)
             }
         }
     }

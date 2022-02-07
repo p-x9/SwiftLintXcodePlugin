@@ -26,6 +26,7 @@
 		42AAEADF27B1B3CD00F1D977 /* AutoCorrectSelectedRangeCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AAEADE27B1B3CD00F1D977 /* AutoCorrectSelectedRangeCommand.swift */; };
 		42AAEAE227B1B40000F1D977 /* AutoCorrectFileCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AAEAE127B1B40000F1D977 /* AutoCorrectFileCommand.swift */; };
 		42AAEAE427B1B42900F1D977 /* AutoCorrectProjectCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AAEAE327B1B42900F1D977 /* AutoCorrectProjectCommand.swift */; };
+		42AAEAE627B1B4F600F1D977 /* XcodeCommandError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AAEAE527B1B4F600F1D977 /* XcodeCommandError.swift */; };
 		42BD1FE3265969110040AD85 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42BD1FE2265969110040AD85 /* ScriptingBridge.framework */; };
 		42EF8BCC26580CF40041B923 /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FD41F7265806DD00D0FCBB /* XcodeKit.framework */; };
 		42EF8BCD26580CF40041B923 /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 42FD41F7265806DD00D0FCBB /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -138,6 +139,7 @@
 		42AAEADE27B1B3CD00F1D977 /* AutoCorrectSelectedRangeCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCorrectSelectedRangeCommand.swift; sourceTree = "<group>"; };
 		42AAEAE127B1B40000F1D977 /* AutoCorrectFileCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCorrectFileCommand.swift; sourceTree = "<group>"; };
 		42AAEAE327B1B42900F1D977 /* AutoCorrectProjectCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCorrectProjectCommand.swift; sourceTree = "<group>"; };
+		42AAEAE527B1B4F600F1D977 /* XcodeCommandError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeCommandError.swift; sourceTree = "<group>"; };
 		42BD1FDF265967C70040AD85 /* Xcode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Xcode.h; sourceTree = "<group>"; };
 		42BD1FE2265969110040AD85 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
 		42BD1FE426596F110040AD85 /* SwiftLintXPC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftLintXPC.entitlements; sourceTree = "<group>"; };
@@ -315,6 +317,7 @@
 				42FD41FE265806DD00D0FCBB /* Info.plist */,
 				42FD41FF265806DD00D0FCBB /* XcodeEx.entitlements */,
 				42296F3B26593310007372AE /* XcodeEx-Bridging-Header.h */,
+				42AAEAE527B1B4F600F1D977 /* XcodeCommandError.swift */,
 			);
 			path = XcodeEx;
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 				421CEBC8265EAB3900FD1A2F /* PATH.swift in Sources */,
 				42AAEAE427B1B42900F1D977 /* AutoCorrectProjectCommand.swift in Sources */,
 				42FD41FD265806DD00D0FCBB /* SourceEditorCommand.swift in Sources */,
+				42AAEAE627B1B4F600F1D977 /* XcodeCommandError.swift in Sources */,
 				421CEBBD265EA26A00FD1A2F /* FilePathMode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

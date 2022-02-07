@@ -30,8 +30,9 @@ class AutoCorrectFileCommand: SourceEditorCommand {
         swiftLintXpc.autocorrectCurrentFile { isCompleted in
             if isCompleted {
                 completionHandler(nil)
+            } else {
+                completionHandler(XcodeCommandError.swiftlintError)
             }
-            completionHandler(nil)
         }
 
     }

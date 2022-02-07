@@ -30,9 +30,9 @@ class AutoCorrectProjectCommand: SourceEditorCommand {
         swiftLintXpc.autocorrectProject {
             if $0 {
                 completionHandler(nil)
+            } else {
+                completionHandler(XcodeCommandError.swiftlintError)
             }
-            completionHandler(NSError(domain: "", code: 0))
         }
-        completionHandler(nil)
     }
 }
