@@ -20,7 +20,7 @@ class AutoCorrectFileCommand: SourceEditorCommand {
     }
 
     override func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void) {
-        let connection = NSXPCConnection(serviceName: "com.p-x9.SwiftLintXPC")
+        let connection = NSXPCConnection(serviceName: DEFINE.swiftLintXPCBundleIdentifier)
         connection.remoteObjectInterface = NSXPCInterface(with: SwiftLintXPCProtocol.self)
         connection.resume()
 
