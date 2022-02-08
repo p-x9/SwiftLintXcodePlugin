@@ -6,8 +6,12 @@
 #  SwiftLint Xcode Plugin
 
 ## Demo
-
-![Demo](Resources/demo.gif)
+### AutoCorrect All Files
+![all](https://user-images.githubusercontent.com/50244599/153013195-2ca34aa3-c2a0-4636-b23b-dff509bc555b.gif)
+### AutoCorrect Current File
+![current](https://user-images.githubusercontent.com/50244599/153013315-5ea10d75-7ce0-4c76-aad1-23fac0115b2c.gif)
+### AutoCorrect Selected Range
+![selected](https://user-images.githubusercontent.com/50244599/153013422-f9336207-22b4-434f-a3e3-3789809e603c.gif)
 
 ## Usage
 1. Set SwiftLint Path
