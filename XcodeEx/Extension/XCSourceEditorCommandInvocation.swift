@@ -20,10 +20,10 @@ extension XCSourceEditorCommandInvocation {
             let line = lines[row]
 
             let startIndex = line.index(line.startIndex, offsetBy: 0)
-            let endIndex = line.index(line.startIndex, offsetBy: line.utf8CString.count - 1)
+            let endIndex = line.index(line.startIndex, offsetBy: line.count - 1)
 
             return String(line[startIndex ..< endIndex])
-        }.joined()
+        }.joined(separator: "\n")
     }
 
     func selectedString(at selectionIndex: Int) -> String? {
@@ -39,9 +39,9 @@ extension XCSourceEditorCommandInvocation {
             let isEndLine = row == selection.end.line
 
             let start = isStartLine ? selection.start.column : 0
-            let end = isEndLine ? selection.end.column : line.count - 1
+            let end = isEndLine ? selection.end.column : line.utf8CString.count - 1
 
-            return line[NSRange(location: start, length: end - start + 1)]
+            return line[NSRange(location: start, length: end - start)]
         }.joined()
 
     }

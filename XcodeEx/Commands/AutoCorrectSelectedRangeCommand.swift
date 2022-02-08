@@ -25,7 +25,7 @@ class AutoCorrectSelectedRangeCommand: SourceEditorCommand {
         connection.resume()
 
         guard let selection = invocation.buffer.selections.firstObject as? XCSourceTextRange,
-              let text = invocation.selectedString(at: 0),
+              let text = invocation.selectedLine(at: 0),
               let url = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first else {
                   return
         }

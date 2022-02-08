@@ -48,7 +48,7 @@
     
     [task launch];
     [task waitUntilExit];
-   
+    
     if (![task isRunning]){
         int status = task.terminationStatus;
         NSData *data = [standardOutput.fileHandleForReading readDataToEndOfFile];
@@ -59,7 +59,7 @@
                 NSLog(@"Succeed: %@", output);
                 break;
             default: //Failed
-                NSLog(@"Faild: %@", output);
+                NSLog(@"Failed: %@", output);
                 break;
         }
         return status;

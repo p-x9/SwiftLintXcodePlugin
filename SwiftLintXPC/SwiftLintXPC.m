@@ -36,7 +36,7 @@
 }
 
 - (void)activeWorkspaceDocumentPath:(void (^)(NSString *))reply {
-   reply([self.xcodeHelper activeWorkspaceDocumentPath]);
+    reply([self.xcodeHelper activeWorkspaceDocumentPath]);
 }
 
 - (void)activeProjectFolderPath:(void (^)(NSString *))reply {
