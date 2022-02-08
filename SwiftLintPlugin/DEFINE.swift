@@ -10,4 +10,5 @@ import Foundation
 
 enum DEFINE {
     static let defaultSwiftLintPath = "/usr/local/bin/swiftlint"
+    static let swiftLintXPCBundleIdentifier = "com.p-x9.SwiftLintXPC"
 }

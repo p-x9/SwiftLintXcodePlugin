@@ -36,7 +36,6 @@
     return [[self activeWorkspaceDocumentPath] stringByDeletingLastPathComponent];
 }
 
-//TODO: 違うフォルダの同名ファイルの判別
 //TODO: modifiedなファイルの扱い
 - (NSString *)currentFilePath {
     [self save];

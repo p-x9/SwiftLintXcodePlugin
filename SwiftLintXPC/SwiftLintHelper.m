@@ -20,23 +20,23 @@
     return @"/usr/local/bin/swiftlint";
 }
 
-- (void)autoCorrect:(NSString *)path withRule:(NSString* _Nullable)rulePath {
+- (int)autoCorrect:(NSString *)path withRule:(NSString* _Nullable)rulePath {
     NSMutableArray<NSString *> *arguments = [[NSMutableArray alloc] initWithArray:@[@"lint",@"--fix",@"--path",path]];
     if(rulePath){
         [arguments addObjectsFromArray:@[@"--config",rulePath]];
     }
-    [self runSwiftLint:arguments];
+    return [self runSwiftLint:arguments];
 }
 
-- (void)runSwiftLint:(NSArray<NSString *>*)arguments {
+- (int)runSwiftLint:(NSArray<NSString *>*)arguments {
     NSString *swiftLintPath = self.swiftLintPath;
     if(!swiftLintPath){
         swiftLintPath = SwiftLintHelper.defaultSwiftLintPath;
     }
-    [self runCommand:swiftLintPath withArguments:arguments];
+    return [self runCommand:swiftLintPath withArguments:arguments];
 }
 
-- (void)runCommand:(NSString *)commandPath withArguments:(NSArray<NSString *>*)arguments {
+- (int)runCommand:(NSString *)commandPath withArguments:(NSArray<NSString *>*)arguments {
     NSTask *task = [[NSTask alloc] init];
     NSPipe *standardOutput = [NSPipe pipe];
     NSPipe *standardError = [NSPipe pipe];
@@ -48,7 +48,7 @@
     
     [task launch];
     [task waitUntilExit];
-   
+    
     if (![task isRunning]){
         int status = task.terminationStatus;
         NSData *data = [standardOutput.fileHandleForReading readDataToEndOfFile];
@@ -58,10 +58,13 @@
             case 0: //Succeed
                 NSLog(@"Succeed: %@", output);
                 break;
-            default: //Faild
-                NSLog(@"Faild: %@", output);
+            default: //Failed
+                NSLog(@"Failed: %@", output);
                 break;
         }
+        return status;
+    } else {
+        return 1;
     }
 }
 
