@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import ServiceManagement
 import Defaults
 
 class ViewController: NSViewController {
@@ -31,6 +32,11 @@ class ViewController: NSViewController {
             } else {
                 swiftlintPathTextField.stringValue = Defaults[.swiftlintPath]
             }
+        }
+    }
+    @IBOutlet private weak var launchAtLoginCheckBox: NSButton! {
+        didSet {
+            launchAtLoginCheckBox.state = Defaults[.shouldLaunchAtLogin] ? .on : .off
         }
     }
 
@@ -59,6 +65,12 @@ class ViewController: NSViewController {
         }
     }
 
+    @IBAction private func handleLaunchAtLoginCheckBox(_ sender: Any) {
+        let shouldLaunchAtLogin = launchAtLoginCheckBox.state == .on
+        Defaults[.shouldLaunchAtLogin] = shouldLaunchAtLogin
+
+        SMLoginItemSetEnabled(DEFINE.launcherAppBundleIdentifier as CFString, shouldLaunchAtLogin)
+    }
 }
 
 extension ViewController: NSTextFieldDelegate {
