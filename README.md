@@ -7,11 +7,11 @@
 
 ## Demo
 ### AutoCorrect All Files
-![all](https://user-images.githubusercontent.com/50244599/153013195-2ca34aa3-c2a0-4636-b23b-dff509bc555b.gif)
+![all](https://user-images.githubusercontent.com/50244599/153168655-5c814fe8-6414-4c28-8c24-99f171de156a.gif)
 ### AutoCorrect Current File
-![current](https://user-images.githubusercontent.com/50244599/153013315-5ea10d75-7ce0-4c76-aad1-23fac0115b2c.gif)
+![current](https://user-images.githubusercontent.com/50244599/153169283-82a5acdf-2e3e-4160-9cb2-54a3ca90c687.gif)
 ### AutoCorrect Selected Range
-![selected](https://user-images.githubusercontent.com/50244599/153013422-f9336207-22b4-434f-a3e3-3789809e603c.gif)
+![selected](https://user-images.githubusercontent.com/50244599/153169719-9bef8a33-80ae-43e1-b4ac-e925862b5ad2.gif)
 
 ## Usage
 1. Set SwiftLint Path
