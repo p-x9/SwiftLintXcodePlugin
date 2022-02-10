@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -705,15 +706,15 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="SwiftLintPlugin" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="605" height="121"/>
+                    <view key="view" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="605" height="183"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fillEqually" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pwp-p3-kYg">
-                                <rect key="frame" x="16" y="16" width="573" height="118"/>
+                                <rect key="frame" x="16" y="16" width="573" height="151"/>
                                 <subviews>
                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="yv7-F3-pfY">
-                                        <rect key="frame" x="-2" y="38" width="577" height="80"/>
+                                        <rect key="frame" x="-2" y="71" width="577" height="80"/>
                                         <textFieldCell key="cell" selectable="YES" id="zuB-8h-k5T">
                                             <font key="font" usesAppearanceFont="YES"/>
                                             <string key="title">SwiftLint Plugin for Xcode. 
@@ -725,14 +726,35 @@ It can be set from Preference APP -&gt; Security &amp; Privacy -&gt; Privacy -&g
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="Cmd-dp-eG6">
-                                        <rect key="frame" x="8" y="27" width="557" height="5"/>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GZw-aA-VnS">
+                                        <rect key="frame" x="0.0" y="40" width="122" height="23"/>
+                                        <subviews>
+                                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EsX-QF-82t">
+                                                <rect key="frame" x="-2" y="6" width="124" height="18"/>
+                                                <buttonCell key="cell" type="check" title="Launch At Login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="5Ba-NL-tZ0">
+                                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="system"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="handleLaunchAtLoginCheckBox:" target="XfG-lQ-9wD" id="Y3p-aI-WhJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="VCT-eN-xA8">
+                                        <rect key="frame" x="0.0" y="29" width="557" height="5"/>
                                     </box>
                                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZMn-PH-OPt">
-                                        <rect key="frame" x="0.0" y="0.0" width="573" height="21"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="573" height="23"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KUl-qq-9kJ">
-                                                <rect key="frame" x="-2" y="5" width="89" height="16"/>
+                                                <rect key="frame" x="-2" y="7" width="89" height="16"/>
                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="SwiftLint Path" id="Yed-OX-SeH">
                                                     <font key="font" usesAppearanceFont="YES"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -740,7 +762,7 @@ It can be set from Preference APP -&gt; Security &amp; Privacy -&gt; Privacy -&g
                                                 </textFieldCell>
                                             </textField>
                                             <popUpButton horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="e5u-68-49L">
-                                                <rect key="frame" x="90" y="-3" width="87" height="25"/>
+                                                <rect key="frame" x="90" y="-1" width="87" height="25"/>
                                                 <popUpButtonCell key="cell" type="push" title="Default" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="hlj-Ve-YRa" id="ugU-Pk-aXG">
                                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="menu"/>
@@ -757,7 +779,7 @@ It can be set from Preference APP -&gt; Security &amp; Privacy -&gt; Privacy -&g
                                                 </connections>
                                             </popUpButton>
                                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Hb8-9R-wC2">
-                                                <rect key="frame" x="181" y="0.0" width="392" height="21"/>
+                                                <rect key="frame" x="181" y="2" width="392" height="21"/>
                                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="4pz-Q8-MdH">
                                                     <font key="font" metaFont="system"/>
                                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -779,16 +801,16 @@ It can be set from Preference APP -&gt; Security &amp; Privacy -&gt; Privacy -&g
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="yv7-F3-pfY" firstAttribute="leading" secondItem="pwp-p3-kYg" secondAttribute="leading" id="ME2-FQ-T4m"/>
-                                    <constraint firstItem="Cmd-dp-eG6" firstAttribute="leading" secondItem="pwp-p3-kYg" secondAttribute="leading" constant="8" id="PNf-aL-VFt"/>
                                     <constraint firstAttribute="trailing" secondItem="yv7-F3-pfY" secondAttribute="trailing" id="nHa-KR-t4w"/>
-                                    <constraint firstAttribute="trailing" secondItem="Cmd-dp-eG6" secondAttribute="trailing" constant="8" id="urV-Wk-L3P"/>
                                 </constraints>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
+                                    <integer value="1000"/>
                                 </visibilityPriorities>
                                 <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
@@ -803,13 +825,14 @@ It can be set from Preference APP -&gt; Security &amp; Privacy -&gt; Privacy -&g
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="launchAtLoginCheckBox" destination="EsX-QF-82t" id="9vh-CL-WyL"/>
                         <outlet property="swiftlintPathPopUpButton" destination="e5u-68-49L" id="1PZ-Mq-tIv"/>
                         <outlet property="swiftlintPathTextField" destination="Hb8-9R-wC2" id="Qet-nl-f6W"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="76" y="674"/>
         </scene>
     </scenes>
 </document>
