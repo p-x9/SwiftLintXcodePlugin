@@ -217,6 +217,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4231EAA627B66A61004BCA53 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4231EAA227B6593F004BCA53 /* NSImage.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		429D8B722659328D00BF9FB9 /* SwiftLintXPC */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,7 +297,7 @@
 				421CEBB5265E377400FD1A2F /* Defaults.Keys.swift */,
 				421CEBC3265EA79A00FD1A2F /* DEFINE.swift */,
 				421CEBC6265EAA9B00FD1A2F /* PATH.swift */,
-				4231EAA227B6593F004BCA53 /* NSImage.swift */,
+				4231EAA627B66A61004BCA53 /* Extension */,
 				42FD41C7265800F100D0FCBB /* Assets.xcassets */,
 				42FD41C9265800F100D0FCBB /* Preference.storyboard */,
 				42FD41CC265800F100D0FCBB /* Info.plist */,
