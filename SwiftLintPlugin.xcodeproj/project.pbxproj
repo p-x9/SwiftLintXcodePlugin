@@ -17,6 +17,8 @@
 		421CEBCD265EB31800FD1A2F /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 421CEBCC265EB31800FD1A2F /* Defaults */; };
 		421CEBCE265EB35700FD1A2F /* PATH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421CEBC6265EAA9B00FD1A2F /* PATH.swift */; };
 		42296F39265932CD007372AE /* SwiftLintXPC.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = 429D8B712659328D00BF9FB9 /* SwiftLintXPC.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4231EAA327B6593F004BCA53 /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231EAA227B6593F004BCA53 /* NSImage.swift */; };
+		4231EAA527B667A4004BCA53 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231EAA427B667A4004BCA53 /* main.swift */; };
 		42692BA5265A26A000A2CCAE /* XcodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 42692BA4265A26A000A2CCAE /* XcodeHelper.m */; };
 		42910795265A5FF2008F38F5 /* SwiftLintHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 42910794265A5FF2008F38F5 /* SwiftLintHelper.m */; };
 		4291079E265C0D13008F38F5 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 4291079D265C0D13008F38F5 /* Defaults */; };
@@ -127,6 +129,8 @@
 		421CEBC3265EA79A00FD1A2F /* DEFINE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DEFINE.swift; sourceTree = "<group>"; };
 		421CEBC6265EAA9B00FD1A2F /* PATH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PATH.swift; sourceTree = "<group>"; };
 		42296F3B26593310007372AE /* XcodeEx-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XcodeEx-Bridging-Header.h"; sourceTree = "<group>"; };
+		4231EAA227B6593F004BCA53 /* NSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImage.swift; sourceTree = "<group>"; };
+		4231EAA427B667A4004BCA53 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		42692BA4265A26A000A2CCAE /* XcodeHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XcodeHelper.m; sourceTree = "<group>"; };
 		42692BA6265A26F800A2CCAE /* XcodeHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XcodeHelper.h; sourceTree = "<group>"; };
 		42910794265A5FF2008F38F5 /* SwiftLintHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftLintHelper.m; sourceTree = "<group>"; };
@@ -285,10 +289,12 @@
 				421CEBB5265E377400FD1A2F /* Defaults.Keys.swift */,
 				421CEBC3265EA79A00FD1A2F /* DEFINE.swift */,
 				421CEBC6265EAA9B00FD1A2F /* PATH.swift */,
+				4231EAA227B6593F004BCA53 /* NSImage.swift */,
 				42FD41C7265800F100D0FCBB /* Assets.xcassets */,
 				42FD41C9265800F100D0FCBB /* Main.storyboard */,
 				42FD41CC265800F100D0FCBB /* Info.plist */,
 				42FD41CD265800F100D0FCBB /* SwiftLintPlugin.entitlements */,
+				4231EAA427B667A4004BCA53 /* main.swift */,
 			);
 			path = SwiftLintPlugin;
 			sourceTree = "<group>";
@@ -572,8 +578,10 @@
 			files = (
 				42FD41C6265800EE00D0FCBB /* ViewController.swift in Sources */,
 				42FD41C4265800EE00D0FCBB /* AppDelegate.swift in Sources */,
+				4231EAA527B667A4004BCA53 /* main.swift in Sources */,
 				421CEBCE265EB35700FD1A2F /* PATH.swift in Sources */,
 				421CEBB6265E377400FD1A2F /* Defaults.Keys.swift in Sources */,
+				4231EAA327B6593F004BCA53 /* NSImage.swift in Sources */,
 				421CEBC4265EA79A00FD1A2F /* DEFINE.swift in Sources */,
 				421CEBB8265E923A00FD1A2F /* FilePathMode.swift in Sources */,
 			);

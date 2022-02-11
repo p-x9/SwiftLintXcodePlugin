@@ -17,4 +17,5 @@ extension Defaults.Keys {
     static let swiftlintPath = Defaults.Key<String>("swiftlintPath", default: DEFINE.defaultSwiftLintPath, suite: groupUserDefaults ?? userDefaults)
 
     static let shouldLaunchAtLogin = Defaults.Key<Bool>("shouldLaunchAtLogin", default: false)
+    static let shouldOpenWindowWhenLaunch = Defaults.Key<Bool>("shouldOpenWindowWhenLaunch", default: true)
 }

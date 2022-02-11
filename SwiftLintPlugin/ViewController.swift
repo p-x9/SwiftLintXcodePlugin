@@ -39,6 +39,11 @@ class ViewController: NSViewController {
             launchAtLoginCheckBox.state = Defaults[.shouldLaunchAtLogin] ? .on : .off
         }
     }
+    @IBOutlet private weak var shouldOpenWindowCheckBox: NSButton! {
+        didSet {
+            shouldOpenWindowCheckBox.state = Defaults[.shouldOpenWindowWhenLaunch] ? .on : .off
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +75,10 @@ class ViewController: NSViewController {
         Defaults[.shouldLaunchAtLogin] = shouldLaunchAtLogin
 
         SMLoginItemSetEnabled(DEFINE.launcherAppBundleIdentifier as CFString, shouldLaunchAtLogin)
+    }
+    @IBAction private func handleShouldOpenWindowCheckBox(_ sender: Any) {
+        let shouldOpenWindow = shouldOpenWindowCheckBox.state == .on
+        Defaults[.shouldOpenWindowWhenLaunch] = shouldOpenWindow
     }
 }
 
