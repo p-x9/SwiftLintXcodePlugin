@@ -37,7 +37,7 @@
 		42FD41C4265800EE00D0FCBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD41C3265800EE00D0FCBB /* AppDelegate.swift */; };
 		42FD41C6265800EE00D0FCBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD41C5265800EE00D0FCBB /* ViewController.swift */; };
 		42FD41C8265800F100D0FCBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42FD41C7265800F100D0FCBB /* Assets.xcassets */; };
-		42FD41CB265800F100D0FCBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42FD41C9265800F100D0FCBB /* Main.storyboard */; };
+		42FD41CB265800F100D0FCBB /* Preference.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42FD41C9265800F100D0FCBB /* Preference.storyboard */; };
 		42FD41D7265800F200D0FCBB /* SwiftLintPluginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD41D6265800F200D0FCBB /* SwiftLintPluginTests.swift */; };
 		42FD41E2265800F200D0FCBB /* SwiftLintPluginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42FD41E1265800F200D0FCBB /* SwiftLintPluginUITests.swift */; };
 		42FD41F6265806DD00D0FCBB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42FD41F5265806DD00D0FCBB /* Cocoa.framework */; };
@@ -155,7 +155,7 @@
 		42FD41C3265800EE00D0FCBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42FD41C5265800EE00D0FCBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		42FD41C7265800F100D0FCBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		42FD41CA265800F100D0FCBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		42FD41CA265800F100D0FCBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Preference.storyboard; sourceTree = "<group>"; };
 		42FD41CC265800F100D0FCBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42FD41CD265800F100D0FCBB /* SwiftLintPlugin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftLintPlugin.entitlements; sourceTree = "<group>"; };
 		42FD41D2265800F200D0FCBB /* SwiftLintPluginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLintPluginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -291,7 +291,7 @@
 				421CEBC6265EAA9B00FD1A2F /* PATH.swift */,
 				4231EAA227B6593F004BCA53 /* NSImage.swift */,
 				42FD41C7265800F100D0FCBB /* Assets.xcassets */,
-				42FD41C9265800F100D0FCBB /* Main.storyboard */,
+				42FD41C9265800F100D0FCBB /* Preference.storyboard */,
 				42FD41CC265800F100D0FCBB /* Info.plist */,
 				42FD41CD265800F100D0FCBB /* SwiftLintPlugin.entitlements */,
 				4231EAA427B667A4004BCA53 /* main.swift */,
@@ -512,7 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42FD41C8265800F100D0FCBB /* Assets.xcassets in Resources */,
-				42FD41CB265800F100D0FCBB /* Main.storyboard in Resources */,
+				42FD41CB265800F100D0FCBB /* Preference.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,12 +648,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		42FD41C9265800F100D0FCBB /* Main.storyboard */ = {
+		42FD41C9265800F100D0FCBB /* Preference.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				42FD41CA265800F100D0FCBB /* Base */,
 			);
-			name = Main.storyboard;
+			name = Preference.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

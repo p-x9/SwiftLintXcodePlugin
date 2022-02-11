@@ -49,7 +49,8 @@ extension AppDelegate {
     }
 
     func setupPreferenceWindow() {
-        guard let windowController = NSStoryboard(name: "Main", bundle: nil).instantiateInitialController() as? NSWindowController else {
+        let storyboard = NSStoryboard(name: "Preference", bundle: nil)
+        guard let windowController = storyboard.instantiateInitialController() as? NSWindowController else {
             return
         }
         self.preferenceWindowController = windowController
