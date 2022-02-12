@@ -19,4 +19,4 @@
 - relative: Relative path with the current project folder as the basis.
 - custom: Absolute path
 
-![Screen1](Resources/screen1.png)
+<img width="717" alt="Screen" src="https://user-images.githubusercontent.com/50244599/153703820-8ecf63eb-7a11-45e3-89b4-65d99f872868.png">
