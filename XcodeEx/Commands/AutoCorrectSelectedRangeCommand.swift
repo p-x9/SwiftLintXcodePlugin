@@ -48,7 +48,7 @@ class AutoCorrectSelectedRangeCommand: SourceEditorCommand {
                           completionHandler(XcodeCommandError.fileNotFound)
                           return
                       }
-                let lines = content.split(separator: "\n").map { String($0) }
+                let lines = content.components(separatedBy: .newlines)
 
                 lines.enumerated().forEach { index, line in
                     if index < invocation.buffer.lines.count {
