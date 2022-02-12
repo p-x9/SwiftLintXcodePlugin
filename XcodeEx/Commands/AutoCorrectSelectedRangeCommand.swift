@@ -50,14 +50,14 @@ class AutoCorrectSelectedRangeCommand: SourceEditorCommand {
                       }
                 let lines = content.components(separatedBy: .newlines)
 
+                let selectedLineCount = selection.end.line - selection.start.line + 1
                 lines.enumerated().forEach { index, line in
-                    if index < invocation.buffer.lines.count {
+                    if index < selectedLineCount {
                         invocation.buffer.lines[index + selection.start.line] = line
                     } else {
-                        invocation.buffer.lines.insert(line, at: index)
+                        invocation.buffer.lines.insert(line, at: index + selection.start.line)
                     }
                 }
-                let selectedLineCount = selection.end.line - selection.start.line + 1
                 if lines.count < selectedLineCount {
                     (selection.start.line + lines.count...selection.end.line).forEach { index in
                         invocation.buffer.lines[index] = ""
