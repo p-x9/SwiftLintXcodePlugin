@@ -40,9 +40,10 @@
 - (NSString *)currentFilePath {
     [self save];
     XcodeWindow *window = [self.xcodeApp windows].firstObject;
+    NSString *name = [window.name componentsSeparatedByString:@" "].lastObject;
     NSArray<XcodeDocument *> *documents = [self.xcodeApp documents];
     NSInteger index = [documents indexOfObjectPassingTest:^BOOL(XcodeDocument * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        return  [[obj.path lastPathComponent] isEqualToString:window.name];
+        return  [[obj.path lastPathComponent] isEqualToString:name];
     }];
     
     XcodeDocument *currentDocument = [documents objectAtIndex:index];
