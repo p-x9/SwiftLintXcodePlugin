@@ -19,12 +19,16 @@
 		42296F39265932CD007372AE /* SwiftLintXPC.xpc in CopyFiles */ = {isa = PBXBuildFile; fileRef = 429D8B712659328D00BF9FB9 /* SwiftLintXPC.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4231EAA327B6593F004BCA53 /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231EAA227B6593F004BCA53 /* NSImage.swift */; };
 		4231EAA527B667A4004BCA53 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4231EAA427B667A4004BCA53 /* main.swift */; };
+		42644D7727B7B10700E29E93 /* DEFINE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421CEBC3265EA79A00FD1A2F /* DEFINE.swift */; };
 		42692BA5265A26A000A2CCAE /* XcodeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 42692BA4265A26A000A2CCAE /* XcodeHelper.m */; };
 		42910795265A5FF2008F38F5 /* SwiftLintHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 42910794265A5FF2008F38F5 /* SwiftLintHelper.m */; };
 		4291079E265C0D13008F38F5 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 4291079D265C0D13008F38F5 /* Defaults */; };
 		429D8B762659328D00BF9FB9 /* SwiftLintXPC.m in Sources */ = {isa = PBXBuildFile; fileRef = 429D8B752659328D00BF9FB9 /* SwiftLintXPC.m */; };
 		429D8B782659328D00BF9FB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 429D8B772659328D00BF9FB9 /* main.m */; };
 		429D8B7C2659328D00BF9FB9 /* SwiftLintXPC.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = 429D8B712659328D00BF9FB9 /* SwiftLintXPC.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		42A501E127B7AEC90054A0F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A501E027B7AEC90054A0F9 /* AppDelegate.swift */; };
+		42A501EF27B7AFED0054A0F9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A501EE27B7AFED0054A0F9 /* main.swift */; };
+		42A501F127B7B07D0054A0F9 /* SwiftLintPluginLauncher.app in Copy Launch At Login Item */ = {isa = PBXBuildFile; fileRef = 42A501DE27B7AEC90054A0F9 /* SwiftLintPluginLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		42AAEADF27B1B3CD00F1D977 /* AutoCorrectSelectedRangeCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AAEADE27B1B3CD00F1D977 /* AutoCorrectSelectedRangeCommand.swift */; };
 		42AAEAE227B1B40000F1D977 /* AutoCorrectFileCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AAEAE127B1B40000F1D977 /* AutoCorrectFileCommand.swift */; };
 		42AAEAE427B1B42900F1D977 /* AutoCorrectProjectCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42AAEAE327B1B42900F1D977 /* AutoCorrectProjectCommand.swift */; };
@@ -99,6 +103,17 @@
 			name = "Embed XPC Services";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		42A501F027B7B0550054A0F9 /* Copy Launch At Login Item */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				42A501F127B7B07D0054A0F9 /* SwiftLintPluginLauncher.app in Copy Launch At Login Item */,
+			);
+			name = "Copy Launch At Login Item";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		42EF8BCE26580CF40041B923 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -142,6 +157,11 @@
 		429D8B752659328D00BF9FB9 /* SwiftLintXPC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftLintXPC.m; sourceTree = "<group>"; };
 		429D8B772659328D00BF9FB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		429D8B792659328D00BF9FB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42A501DE27B7AEC90054A0F9 /* SwiftLintPluginLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLintPluginLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		42A501E027B7AEC90054A0F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		42A501E927B7AECA0054A0F9 /* SwiftLintPluginLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftLintPluginLauncher.entitlements; sourceTree = "<group>"; };
+		42A501ED27B7AF8A0054A0F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		42A501EE27B7AFED0054A0F9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		42AAEADE27B1B3CD00F1D977 /* AutoCorrectSelectedRangeCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCorrectSelectedRangeCommand.swift; sourceTree = "<group>"; };
 		42AAEAE127B1B40000F1D977 /* AutoCorrectFileCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCorrectFileCommand.swift; sourceTree = "<group>"; };
 		42AAEAE327B1B42900F1D977 /* AutoCorrectProjectCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoCorrectProjectCommand.swift; sourceTree = "<group>"; };
@@ -179,6 +199,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				42BD1FE3265969110040AD85 /* ScriptingBridge.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42A501DB27B7AEC90054A0F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +270,17 @@
 			path = SwiftLintXPC;
 			sourceTree = "<group>";
 		};
+		42A501DF27B7AEC90054A0F9 /* SwiftLintPluginLauncher */ = {
+			isa = PBXGroup;
+			children = (
+				42A501ED27B7AF8A0054A0F9 /* Info.plist */,
+				42A501E027B7AEC90054A0F9 /* AppDelegate.swift */,
+				42A501E927B7AECA0054A0F9 /* SwiftLintPluginLauncher.entitlements */,
+				42A501EE27B7AFED0054A0F9 /* main.swift */,
+			);
+			path = SwiftLintPluginLauncher;
+			sourceTree = "<group>";
+		};
 		42AAEADD27B1B3A600F1D977 /* Commands */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +309,7 @@
 				42FD41E0265800F200D0FCBB /* SwiftLintPluginUITests */,
 				42FD41F9265806DD00D0FCBB /* XcodeEx */,
 				429D8B722659328D00BF9FB9 /* SwiftLintXPC */,
+				42A501DF27B7AEC90054A0F9 /* SwiftLintPluginLauncher */,
 				42FD41F4265806DD00D0FCBB /* Frameworks */,
 				42FD41C1265800EE00D0FCBB /* Products */,
 			);
@@ -284,6 +323,7 @@
 				42FD41DD265800F200D0FCBB /* SwiftLintPluginUITests.xctest */,
 				42FD41F3265806DD00D0FCBB /* SwiftLint.appex */,
 				429D8B712659328D00BF9FB9 /* SwiftLintXPC.xpc */,
+				42A501DE27B7AEC90054A0F9 /* SwiftLintPluginLauncher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -370,6 +410,23 @@
 			productReference = 429D8B712659328D00BF9FB9 /* SwiftLintXPC.xpc */;
 			productType = "com.apple.product-type.xpc-service";
 		};
+		42A501DD27B7AEC90054A0F9 /* SwiftLintPluginLauncher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42A501EC27B7AECA0054A0F9 /* Build configuration list for PBXNativeTarget "SwiftLintPluginLauncher" */;
+			buildPhases = (
+				42A501DA27B7AEC90054A0F9 /* Sources */,
+				42A501DB27B7AEC90054A0F9 /* Frameworks */,
+				42A501DC27B7AEC90054A0F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftLintPluginLauncher;
+			productName = SwiftLintPluginLauncher;
+			productReference = 42A501DE27B7AEC90054A0F9 /* SwiftLintPluginLauncher.app */;
+			productType = "com.apple.product-type.application";
+		};
 		42FD41BF265800EE00D0FCBB /* SwiftLintPlugin */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42FD41E6265800F200D0FCBB /* Build configuration list for PBXNativeTarget "SwiftLintPlugin" */;
@@ -380,6 +437,7 @@
 				42FD4206265806DD00D0FCBB /* Embed App Extensions */,
 				429D8B802659328D00BF9FB9 /* Embed XPC Services */,
 				42910797265A7992008F38F5 /* Run SwiftLint */,
+				42A501F027B7B0550054A0F9 /* Copy Launch At Login Item */,
 			);
 			buildRules = (
 			);
@@ -459,11 +517,14 @@
 		42FD41B8265800EE00D0FCBB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					429D8B702659328D00BF9FB9 = {
 						CreatedOnToolsVersion = 12.5;
+					};
+					42A501DD27B7AEC90054A0F9 = {
+						CreatedOnToolsVersion = 13.2.1;
 					};
 					42FD41BF265800EE00D0FCBB = {
 						CreatedOnToolsVersion = 12.5;
@@ -503,12 +564,20 @@
 				42FD41DC265800F200D0FCBB /* SwiftLintPluginUITests */,
 				42FD41F2265806DD00D0FCBB /* XcodeEx */,
 				429D8B702659328D00BF9FB9 /* SwiftLintXPC */,
+				42A501DD27B7AEC90054A0F9 /* SwiftLintPluginLauncher */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		429D8B6F2659328D00BF9FB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42A501DC27B7AEC90054A0F9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -577,6 +646,16 @@
 				42692BA5265A26A000A2CCAE /* XcodeHelper.m in Sources */,
 				429D8B762659328D00BF9FB9 /* SwiftLintXPC.m in Sources */,
 				42910795265A5FF2008F38F5 /* SwiftLintHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42A501DA27B7AEC90054A0F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42644D7727B7B10700E29E93 /* DEFINE.swift in Sources */,
+				42A501EF27B7AFED0054A0F9 /* main.swift in Sources */,
+				42A501E127B7AEC90054A0F9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -694,6 +773,64 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.p-x9.SwiftLintXPC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		42A501EA27B7AECA0054A0F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = SwiftLintPluginLauncher/SwiftLintPluginLauncher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WLCQDVKTS9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftLintPluginLauncher/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.p-x9.SwiftLintPluginLauncher";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		42A501EB27B7AECA0054A0F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = SwiftLintPluginLauncher/SwiftLintPluginLauncher.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WLCQDVKTS9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftLintPluginLauncher/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.p-x9.SwiftLintPluginLauncher";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -999,6 +1136,15 @@
 			buildConfigurations = (
 				429D8B7E2659328D00BF9FB9 /* Debug */,
 				429D8B7F2659328D00BF9FB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42A501EC27B7AECA0054A0F9 /* Build configuration list for PBXNativeTarget "SwiftLintPluginLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42A501EA27B7AECA0054A0F9 /* Debug */,
+				42A501EB27B7AECA0054A0F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
