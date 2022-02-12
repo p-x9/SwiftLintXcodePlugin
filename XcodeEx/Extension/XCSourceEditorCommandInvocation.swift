@@ -17,6 +17,9 @@ extension XCSourceEditorCommandInvocation {
         }
 
         return (selection.start.line...selection.end.line).map { row -> String in
+            guard lines.indices.contains(row) else {
+                return ""
+            }
             let line = lines[row]
 
             let startIndex = line.index(line.startIndex, offsetBy: 0)
